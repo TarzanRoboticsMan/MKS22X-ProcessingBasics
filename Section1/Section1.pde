@@ -45,8 +45,7 @@ class Visualizer {
     float wide = 400/values.length;
     float start=0;
     for(float val:values){
-      fill(255,0,0);
-      if(val>=0) fill(0,255,0);
+      filler(val);
       rect(x+start,y+100,wide,-val);
       start+=wide;
     }
@@ -55,6 +54,12 @@ class Visualizer {
     //Width of the visualizer is 400!
 
   
+  }
+  void filler(float val){
+    if (val<0)
+      fill(255,255+val*2.57,0);
+    if(val>0)
+      fill(255-val*2.57,255,0);
   }
   void update() {
     //???WRITE THIS METHOD SECOND!!!
