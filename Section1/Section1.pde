@@ -13,8 +13,9 @@ class Visualizer {
   Visualizer(float x, float y) {
     this.x = x;
     this.y = y;
-    values = new float[10];
-    speeds = new float[10];
+    int bars = (int)random(1,41);
+    values = new float[bars];
+    speeds = new float[bars];
     for (int i = 0; i < values.length; i++) {
       values[i] = random(-99, 99);
       speeds[i] = random(2);
